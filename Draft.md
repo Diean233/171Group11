@@ -9,6 +9,7 @@ Outline
 - Proposed solution and experimental results (4-5 pages)
 - Conclusion and discussion (1/2 page)
 - References (no limit)
+
 Overall size 
 - 6-8 pages excluding references 
 - about 5 pages of text and 3-4 figures in position, or at the end of the document
