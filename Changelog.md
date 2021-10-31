@@ -1,4 +1,4 @@
-Changelog
+#Changelog
 
 10/27
 Caitlin Brown: add rough draft of Lin_Poly_Regression.ipynb, linear and polynomial regressions
