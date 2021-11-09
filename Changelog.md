@@ -1,5 +1,8 @@
 Changelog
 
+11/9
+Caitlin Brown: add LSTM.ipynb, it's not working properly yet and needs some debugging
+
 10/31
 Caitlin Brown: tidy up Lin_Poly_Regression.ipynb
 
