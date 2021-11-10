@@ -1,5 +1,8 @@
 Changelog
 
+11/10
+Dingxian Wang: add Lin_Poly_Regression.ipynb
+
 11/9
 Caitlin Brown: add LSTM.ipynb, it's not working properly yet and needs some debugging
 
