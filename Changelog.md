@@ -1,5 +1,8 @@
 Changelog
 
+11/11
+Alvin Agana: Created HTML/CSS/JS files, started working on basic outline
+
 11/10
 Dingxian Wang: add Lin_Poly_Regression.ipynb
 
