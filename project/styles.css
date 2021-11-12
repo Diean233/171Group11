@@ -7,17 +7,19 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
     border-right: 10px solid #FF9696;
     background-color: #FFDBDB;
     width: 225px;
     height: 100%;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav ul {
-    border: 2px solid black;
     margin-top: 50px;
     list-style: none;
     padding-left: 0;
@@ -25,11 +27,28 @@ nav ul {
 
 li {
     list-style-type: none;
+    width: 85%;
+    padding: 8px 10px 8px 10px;
+    font-size: 15px;
+    margin-left: 5px;
     margin-bottom: 10px;
-    height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
 }
 
 
+/* MAIN CONTENT */
 
 main {
     width: 1116px;
@@ -38,16 +57,60 @@ main {
 }
 
 main div:first-child {
-    border: 2px solid black;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
-.main-container {
+/* SECTIONS */ 
+section {
     height: 766px;
     width: 95%;
 }
 
+section h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+section:first-child p span {
+    font-weight: bold;
+    color: #FF2626;
+}
+
+section:first-child div {
+    display: flex;
+    justify-content: center;
+}
+
+/* HEADER */ 
 h1 {
     font-size: 36px;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+header p {
+    font-weight: medium;
+    position: relative;
+    bottom: 20px;
+}
+
+/* BACK TO TOP button */
+#group-info {
+    position: fixed;
+    bottom: -5px;
+    right: 20px;
+    font-size: 14px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px;
+    background-color: #FFDBDB;
+    cursor: pointer;
 }
 
