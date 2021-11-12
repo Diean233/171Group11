@@ -7,8 +7,8 @@
     const navLinks = document.querySelectorAll('nav ul:first-child li a');
     
     navItems.forEach(function(item, i) {
-        item.addEventListener("click", function() {
-            event.preventDefault();
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
 
             let targetID = navLinks[i].getAttribute('href');
             let targetAnchor = document.getElementById(targetID);
