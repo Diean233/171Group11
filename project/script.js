@@ -15,11 +15,11 @@
             let originalTop = Math.floor(targetAnchor.getBoundingClientRect().top) - 70;
             window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
         });
-    })
+    });
 
     const githubLink = document.querySelector('nav ul:last-child li');
     githubLink.addEventListener("click", function() {
         window.open("https://github.com/Diean233/171Group11");
-    })
+    });
 })();
 
