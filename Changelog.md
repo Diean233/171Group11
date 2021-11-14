@@ -1,5 +1,7 @@
 Changelog
 
+11/13 Caitlin Brown: update LSTM.ipynb, working better. Want to try subdividing train/test data by before, after stock starts skyrocketing in recent years.
+
 11/11 + 11/12
 Alvin Agana: Created HTML/CSS/JS files, started working on basic outline + scripts + intro content
 
