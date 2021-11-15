@@ -1,5 +1,8 @@
 Changelog
 
+11/14 
+Dingxian Wang: add upport_Vector_Regression.ipynb skeleton file, to be finished in a few days
+
 11/13 Caitlin Brown: update LSTM.ipynb, working better. Want to try subdividing train/test data by before, after stock starts skyrocketing in recent years.
 
 11/11 + 11/12
