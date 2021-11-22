@@ -1,5 +1,8 @@
 Changelog
 
+11/21
+McKenzie Hochberg: added hyperparameter tuning to LSTM.ipynb
+
 11/14 
 Dingxian Wang: add upport_Vector_Regression.ipynb skeleton file, to be finished in a few days
 
