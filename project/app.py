@@ -11,8 +11,9 @@ def predict():
     date = request.form.get('date')
     print("The date received is", date)
 
-    pred = "the predicted date you chose is: " + date
-    return render_template('index.html', prediction=pred)
+    pred = "The predicted date you chose is: " + date
+    price = "The predicted price is not yet available :) In development"
+    return render_template('index.html', predictedDate=pred, predictedPrice=price)
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)

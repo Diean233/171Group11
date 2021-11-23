@@ -114,3 +114,28 @@ header p {
     cursor: pointer;
 }
 
+
+
+/* Prediction */
+#prediction {
+    display: flex;
+    flex-direction: column;
+}
+
+#prediction h3 {
+    font-size: 24px;
+}
+
+#date-input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#submit-btn {
+    border: none;
+    padding: 10px;
+    background-color: #FF9696;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

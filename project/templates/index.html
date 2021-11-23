@@ -61,14 +61,21 @@
                     We decided to choose the historical data from <span>Tesla, Inc.</span>, which is an American electric vehicle and 
                     clean energy company based in Palo Alto, California, as our company of choice to apply our prediction algorithm. Ideally, 
                     the results that we produce will help financial instutions with market research.</p>
-                <form action="/" method="post">
-                    <input type="text" name="date">
-                    <input type="submit" value="Predict">
-                </form>
             
-                {% if prediction %}
-                    <p>{{prediction}}</p>
-                {% endif %}
+                <div id="prediction">
+                    <h3>Try it out!</h3>
+                    <form action="/" method="post">
+                        <input type="text" name="date" id="date-input" placeholder="Enter a date: ">
+                        <input type="submit" value="Predict" id="submit-btn">
+                    </form>
+
+                    {% if predictedDate %}
+                        <p>{{predictedDate}}</p>
+                    {% endif %}
+                    {% if predictedPrice %}
+                        <p>{{predictedPrice}}</p>
+                    {% endif %}
+                </div>
             </section>
 
             <section id="#problem">
