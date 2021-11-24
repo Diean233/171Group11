@@ -1,6 +1,9 @@
 Changelog
 
 11/23
+McKenzie Hochberg: updated hyperparameter turning to LSTM.ipynb to show results of tuned hyperparameters
+
+11/23
 Alvin Agana: added Python Flask app for demo and added form input. Included how to run app in readme
 Caitlin Brown: add Project-Report folder, contains an outline for typesetting our report in LaTeX. Just needs to be filled in the body text later on.
 
