@@ -1,7 +1,7 @@
 Changelog
 
 11/23
-Alvin Agana: added Python Flask app for demo and added form input
+Alvin Agana: added Python Flask app for demo and added form input. Included how to run app in readme
 
 11/21
 McKenzie Hochberg: added hyperparameter tuning to LSTM.ipynb
