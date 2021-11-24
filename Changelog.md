@@ -1,6 +1,6 @@
 Changelog
 
-11/24
+**11/24**  
 Caitlin Brown: consolidate all linear and poly models into one notebook for ease of interpretation
 
 11/23
