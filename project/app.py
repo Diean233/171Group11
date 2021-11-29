@@ -20,7 +20,7 @@ def hello_world():
 def predict():
 
     # reading data in 
-    df = pd.read_csv('../TSLA.csv')
+    df = pd.read_csv('../Data/TSLA.csv')
     df.Date = pd.to_datetime(df.Date)
     df.Date = fa.datetimeToFloatyear(df.Date)
     df.head()

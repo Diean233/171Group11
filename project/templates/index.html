@@ -34,7 +34,7 @@
         <!-- navbar -->
         <nav> 
             <ul>
-                <li><a href="#intro">📈 Predict Closing Price</a></li>
+                <li><a href="#intro">📈 Predict Closing</a></li>
                 <!--
                 <li><a href="#problem">📚 Problem Description</a></li>
                 <li><a href="#related">🔢 Related Work</a></li>
@@ -67,7 +67,8 @@
                 <div id="prediction">
                     <h3>Try it out!</h3>
                     <form action="/" method="post">
-                        <input type="text" name="date" id="date-input" placeholder="Enter a date: ">
+                        <input type="date" name="date" id="date-input" value="2021-01-01"
+                        min="2010-06-29" max="2021-10-08">
                         <input type="submit" value="Predict" id="submit-btn">
                     </form>
 
