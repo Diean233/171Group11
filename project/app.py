@@ -66,7 +66,7 @@ def predict():
     output = y_pred[0][0]
    
     pred = "The predicted date you chose is: " + date[0]
-    price = "The predicted price is " + str(output)
+    price = str(output)
     return render_template('index.html', predictedDate=pred, predictedPrice=price)
 
 if __name__ == '__main__':
