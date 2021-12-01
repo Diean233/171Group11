@@ -1,5 +1,8 @@
 Changelog
 
+**11/28-11/30**
+Alvin Agana: finished demo of polynomial regression model for using date to predict close
+
 **11/24**  
 Caitlin Brown: consolidate all linear and poly models into one notebook for ease of interpretation
 
