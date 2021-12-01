@@ -62,10 +62,12 @@
                     We’re curious about using machine learning methods to predict stock price and determining a company’s value in the market. 
                     We decided to choose the historical data from <span>Tesla, Inc.</span>, which is an American electric vehicle and 
                     clean energy company based in Palo Alto, California, as our company of choice to apply our prediction algorithm. Ideally, 
-                    the results that we produce will help financial instutions with market research.</p>
+                    the results that we produce will help financial instutions with market research. <br/>
+                    <br/>
+                </p>
             
                 <div id="prediction">
-                    <h3>Try it out!</h3>
+                    <h3>This is a small demo using our polynomial regression model to predict closing price of TSLA stocks using a date of your choice. Try it out!</h3>
                     <form action="/" method="post">
                         <input type="date" name="date" id="date-input" value="2021-01-01"
                         min="2010-06-29" max="2021-10-08">
@@ -73,10 +75,10 @@
                     </form>
 
                     {% if predictedDate %}
-                        <p>{{predictedDate}}</p>
+                        <p>The date you chose is: <span class="prediction-text">{{predictedDate}}</span></p>
                     {% endif %}
                     {% if predictedPrice %}
-                        <p>The predicted price is ${{predictedPrice}}</p>
+                        <p>The predicted closing price is <span class="prediction-text">${{predictedPrice}}</span>!</p>
                     {% endif %}
                 </div>
             </section>

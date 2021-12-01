@@ -120,11 +120,17 @@ header p {
 #prediction {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 #prediction h3 {
     font-size: 24px;
 }
+
+#prediction p {
+    font-size: 18px;
+}
+
 
 #date-input {
     padding: 5px;
@@ -138,4 +144,14 @@ header p {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.prediction-text {
+    font-weight: bold;
+}
+
+#demo-desc {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
 }

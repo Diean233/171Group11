@@ -19,6 +19,30 @@ def hello_world():
 
 @app.route('/', methods=['POST'])
 def predict():
+    def getDate(date):
+        months = {
+            "01": "January",
+            "02": "February",
+            "03": "March",
+            "04": "April",
+            "05": "May",
+            "06": "June",
+            "07": "July",
+            "08": "August",
+            "09": "September",
+            "10": "October",
+            "11": "November",
+            "12": "December",
+        }
+        #2021-01-01
+        year = date[:4]
+        month = date[5:7]
+        day = date[8:]
+
+        if (int(day) < 10):
+            day = day[1:]
+
+        return months[month] + " " + day + ", " + year
 
     # reading data in 
     df = pd.read_csv('../Data/TSLA.csv')
@@ -65,9 +89,10 @@ def predict():
     y_pred = sc.inverse_transform(y_pred)
     output = y_pred[0][0]
    
-    pred = "The predicted date you chose is: " + date[0]
+    predDate = getDate(date[0])
     price = str(output)
-    return render_template('index.html', predictedDate=pred, predictedPrice=price)
+    price = price[:6]
+    return render_template('index.html', predictedDate=predDate, predictedPrice=price)
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
