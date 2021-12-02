@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 1366px;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    border-right: 10px solid #FF9696;
+    background-color: #FFDBDB;
+    width: 225px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav ul {
+    margin-top: 50px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    width: 85%;
+    padding: 8px 10px 8px 10px;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    width: 1116px;
+    margin-left: 250px;
+
+}
+
+main div:first-child {
+    margin-top: 40px;
+}
+
+/* SECTIONS */ 
+section {
+    height: 766px;
+    width: 95%;
+}
+
+section h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+section:first-child p span {
+    font-weight: bold;
+    color: #FF2626;
+}
+
+section:first-child div {
+    display: flex;
+    justify-content: center;
+}
+
+/* HEADER */ 
+h1 {
+    font-size: 36px;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+header p {
+    font-weight: medium;
+    position: relative;
+    bottom: 20px;
+}
+
+/* BACK TO TOP button */
+#group-info {
+    position: fixed;
+    bottom: -5px;
+    right: 20px;
+    font-size: 14px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px;
+    background-color: #FFDBDB;
+    cursor: pointer;
+}
+
+
+
+/* Prediction */
+#prediction {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#prediction h3 {
+    font-size: 24px;
+}
+
+#prediction p {
+    font-size: 18px;
+}
+
+
+#date-input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#submit-btn {
+    border: none;
+    padding: 10px;
+    background-color: #FF9696;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prediction-text {
+    font-weight: bold;
+}
+
+#demo-desc {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
