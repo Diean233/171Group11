@@ -1,5 +1,8 @@
 Changelog
 
+**12/1**
+Tsung Chieh Chen: Added poly-reg model into pickled as 'model.pkl'
+
 **11/28-11/30**
 Alvin Agana: finished demo of polynomial regression model for using date to predict close
 
