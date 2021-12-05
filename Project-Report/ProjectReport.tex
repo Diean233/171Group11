@@ -100,7 +100,7 @@ This model had a mean squared error (MSE) of .5891. As our group had assumed, th
 
 
 \subsection{Polynomial Regression}
-Due to the severity of under-fitting with linear regression, we decided to trial with polynomial regression to achieve a better result. Our first model was almost the same as the linear model, using the date as the independent variable and an 80/20\% train/test split, but we also used 4 different degrees (Figure 3). 
+Due to the severity of under-fitting with linear regression, we decided to trial with polynomial regression to achieve a better result. Our first model was almost the same as the linear model, using the date as the independent variable and an 80/20\% train/test split, but we also used several different degrees (Figure 3). 
 
 \begin{figure}[h]
 \caption{Polynomial Regression Model: Date}
@@ -108,7 +108,6 @@ Due to the severity of under-fitting with linear regression, we decided to trial
 \includegraphics[width=3in]{./Figures/PolyRegression1.png}
 \includegraphics[width=3in]{./Figures/PolyRegression2.png}
 \includegraphics[width=3in]{./Figures/PolyRegression3.png}
-\includegraphics[width=3in]{./Figures/PolyRegression4.png}
 \end{figure}
 
 As expected, under-fitting was not an issue here, these new models are capturing the complexity of the data. Between all the models, 25th degree (green) created the optimum outcome as it captured most of the complexity without signs of over-fitting and ended with an MSE of .00119.
