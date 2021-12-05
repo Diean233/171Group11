@@ -47,8 +47,8 @@ Since the financial data of the real world is complicated, there were many limit
 Developed by RNN, long short-term memory (LSTM) neural networks help forecast financial time series and are able to avoid long-term dependence issues as a result of its special storage unit structure [4]. LSTM is able to remember important events that occurred in the past, from many time steps ago, due to its memory [10]. As a result of this memory feature, RNN proves to be advantageous compared to the traditional ANN because of its ability to evoke temporal patterns in data. Although LSTM is commonly used in speech and image recognition due to its attention mechanism, it is rarely used in finance because of its high noise-to-signal ratio which makes models difficult to predict future prices as they are unable to identify patterns in a dataset. 
 
 Deep learning models have promising results as they can significantly improve the accuracy. Although it was explored that RNN models like LSTM could perform better than ANN, there have been many approaches using ANN to predict stock prices. One application of this model used Nifty stock index dataset and was able to achieve an accuracy of 96\% with the average accuracy over all the cases as 88\% [9]. In this ANN approach, there are customizable parameters and various activation functions are executed that have the option for cross validation sets as well. 
-T
-here is also another proposed system that uses both Regression and Classification in order to predict stock prices. The system will predict the closing price of stock of a company in regression while with classification, the system will predict if the closing price of the stock will increase or decrease the following day [5]. Some regression models that are applied include: simple linear regression, polynomial regression, and support vector regression. The classification algorithms to determine whether the stock will go high or low the next day include: SVM, logistic regression, and Naive Bayes. The accuracy obtained from the models depend largely on the input dataset and does not indicate which algorithm or model provides the best results when used. 
+
+There is also another proposed system that uses both Regression and Classification in order to predict stock prices. The system will predict the closing price of stock of a company in regression while with classification, the system will predict if the closing price of the stock will increase or decrease the following day [5]. Some regression models that are applied include: simple linear regression, polynomial regression, and support vector regression. The classification algorithms to determine whether the stock will go high or low the next day include: SVM, logistic regression, and Naive Bayes. The accuracy obtained from the models depend largely on the input dataset and does not indicate which algorithm or model provides the best results when used. 
 
 To conclude this section, there have been previous findings that go beyond the typical models for regression that are usually implemented in forecasting stock prices. In order to approach the problem of predicting stock prices, regression analysis methods will not solely be used in this project but also methods like LSTM and SVM. This is due to their promising results in modeling complex systems and capturing non-linearity. The results from previous research demonstrate how there are other machine learning techniques that one may not initially think fits the problem statement but actually could produce favorable results. Since the stock market is known for being volatile, nonlinear, and dynamic, it is important to look into analytic techniques being explored in order to detect these trends.
 
@@ -62,25 +62,20 @@ Minimal data cleaning was necessary for this dataset as there were no null or mi
 \begin{figure}[h]
 \caption{Tesla Stock Price 2010-2021}
 \centering
-\includegraphics[width=4in]{./Figures/TSLA.png}
+\includegraphics[width=3in]{./Figures/TSLA.png}
 \end{figure}
 \section{Methods}
 \subsection{Linear Regression}
-
-Linear Regression
 Linear regression is a statistical technique for modeling a relationship between one or more explanatory variables and a scalar response. In this case, we decided to do a simple linear regression and only use one explanatory variable: the date. Naturally, linear regression is a good approach for modeling linear relationships. However, due to TSLA stock data non-linearity, this was a poor choice of model as it was severely under-fitting.
 
 \subsection{Polynomial Regression}
-Polynomial Regression
 Polynomial regression is a technique for modeling the relationship between the explanatory variable(s) and the dependent variable using an nth degree polynomial. It is a slightly better choice for our problem because the TSLA stock price is not linearly related to the date. The constructed model fits polynomials of degree 2, 3, 4, 10, 20, 25, 50, and 100. To evaluate the results we plotted the resulting curves and looked at both the training and testing mean squared error (MSE).
 
 \subsection{Support Vector Regression}
-Support Vector Regression
 Support vector regression (SVR) is a type of model that uses Support Vector Machines (SVMs) in regression problems. While SVMs are usually used in classification problems, SVR is also a strong algorithm for regression problems. To prepare the data to fit the model, we use all the columns in TSLA stock data excluding “Close” and “Adj Close” in the sample vectors, and values of both samples and targets are used after scaling. 
 Next, grid search was applied to tune the hyper-parameters. Based on the performance of a series of combinations, we choose to use RBF (radial basis function) as the kernel, 1000 as the regularization parameter (C), and 0.001 as the kernel coefficient ($\gamma$). An SVR model was then built with the hyper-parameters chosen above. 
 
 \subsection{Long Short-Term Memory}
-LSTM
 Long short-term memory models are variations of recurrent neural networks, a class of artificial neural networks where connections between nodes form along a temporal sequence. This makes them an algorithm of choice for making time series predictions. As such, a first step after scaling the prices to values within the range [0,1] is to tag each stock price instance with a timestamp. We assign a timestamp relative to the rest of the dataset rather than using the datetime instance in the dataframe.
 
 We then build an LSTM model using Keras with 3 layers of 50 nodes and an output layer with one dense node. We use Adam optimization with a learning rate of 0.01, a batch size of 64, mean squared error as our loss function, and run for 100 epochs. For computational efficiency, we implement early stopping if the MSE between our predicted and observed results falls under a certain threshold for 10 or more epochs.
@@ -91,7 +86,6 @@ Next, we use Bayesian Optimization to tune the hyper-parameters of our model. We
 This project so far has applied four different machine learning methods to the dataset: linear regression, polynomial regression, long short-term memory (LSTM), and support vector regression (SVR).
 
 \subsection{Linear Regression}
-Linear Regression
 Even though we knew that the linear regression would not provide a good fit for our model, we still decided to create the model to help explore our data and display a general correlation between the variables. The first problem we ran into is that scikit-learn did not like how our date was formatted (dd/mm/yyyy), so we had to use the pandas function “to\_datetime” to convert it into an acceptable format. 
 
 With this problem solved, we created a linear model (Figure 2) using scikit-learn using “date” as the independent variable and “close” as the target. We also used an 80/20 train/test split.
@@ -106,8 +100,7 @@ This model had a mean squared error (MSE) of .5891. As our group had assumed, th
 
 
 \subsection{Polynomial Regression}
-Polynomial Regression
-Due to the severity of under-fitting with Linear Regression, we decided to trial with polynomial regression to achieve a better result. Our first model was almost the same as the linear model, using the date as the independent variable and an 80/20\% train/test split, but we also used 4 different degrees (Figure 3). 
+Due to the severity of under-fitting with linear regression, we decided to trial with polynomial regression to achieve a better result. Our first model was almost the same as the linear model, using the date as the independent variable and an 80/20\% train/test split, but we also used 4 different degrees (Figure 3). 
 
 \begin{figure}[h]
 \caption{Polynomial Regression Model: Date}
@@ -149,8 +142,6 @@ Degree & Training MSE & Testing MSE \\ \hline
 \end{table}
 
 \subsection{Support Vector Regression}
-
-Support Vector Regression
 This model, with the chosen hyper-parameters, had impressive results. We split the dataset with the same strategy of 80/20\% for train and test sets, and the MSE is as low as .0008, which is the lowest one among all the models we trained. Figure 5 shows the model’s prediction on the test data. 
 
 \begin{figure}[h]
@@ -160,9 +151,8 @@ This model, with the chosen hyper-parameters, had impressive results. We split t
 \end{figure}
 
 In the graph above, the red line, representing the prediction value, always approaches to or covers the grey line that represents the true value. The accuracy of the prediction is also shown by how the predicted values are close to the steep changes of real prices after 2020. However, the performance of the SVR model also shows a great chance of over-fitting.
-\subsection{Long Short-Term Memory}
 
-LSTM
+\subsection{Long Short-Term Memory}
 We fit our LSTM model twice — before and after hyper-parameter tuning. Before tuning, it stopped early at 74 of 100 epochs with a training MSE (loss) of 4.7977e-06 and a testing MSE (val\_loss) of 0.0165. Figure 6 illustrates our model loss over epochs, and the accuracy of the model’s predictions compared to the observed stock price.
 
 After hyper-parameter tuning using Bayesian optimization, training the model stopped early at epoch 57 out of 100 with a training MSE (loss) of 5.2846e-06 and a testing MSE (val\_loss) of 0.0250. Though these loss values are slightly higher than those found before hyper-parameter tuning, this model significantly decreased training time.
@@ -170,10 +160,10 @@ After hyper-parameter tuning using Bayesian optimization, training the model sto
 \begin{figure}[h]
 \centering
 \caption{LSTM results before (above) and after (below) hyper-parameter tuning}
-\includegraphics[width=3in]{./Figures/LSTM1.png}
-\includegraphics[width=3in]{./Figures/LSTM2.png}
-\includegraphics[width=3in]{./Figures/LSTM3.png}
-\includegraphics[width=3in]{./Figures/LSTM4.png}
+\includegraphics[width=2.5in]{./Figures/LSTM1.png}
+\includegraphics[width=2.5in]{./Figures/LSTM2.png}
+\includegraphics[width=2.5in]{./Figures/LSTM3.png}
+\includegraphics[width=2.5in]{./Figures/LSTM4.png}
 \end{figure}
 
 \section{Conclusion}
