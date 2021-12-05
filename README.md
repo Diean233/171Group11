@@ -9,7 +9,7 @@ Data: Tesla Stock https://www.kaggle.com/varpit94/tesla-stock-data-updated-till-
 
 ## How to Run Demo
 ### Requirements
-You'll need python3, pip, and Flask
+You will need to have python3, pip, and Flask installed.
 
 I followed this tutorial for installing pip: https://phoenixnap.com/kb/install-pip-mac
 For installing python3: https://realpython.com/installing-python/
