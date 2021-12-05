@@ -58,6 +58,12 @@ The dataset provides information about Tesla stock data from June 29, 2010 to Oc
 
 Within the TSLA.csv data, there are seven attributes: Date, Open, High, Low, Close, Adj Close, and Volume. Date is formatted as yyyy-mm-dd and is provided on a daily level, taking into account that there are no regular trading hours for stocks on the weekends. The Open attribute is the Tesla stock price at the start of trading day. Similarly, the Close attribute is the stock price at the end of the trading day. The Adj Close attribute stands for “adjusted close” which is the closing price after adjustments to reflect the stock’s value after taking corporate actions into consideration. Adj Close factors in corporate actions including stock splits, dividends, and right offerings. The High attribute tells us what the maximum price is on that trading day. Meanwhile, the Low attribute is the minimum price on that trading day. The Volume is the amount of Tesla stocks traded on that day and is represented by a positive integer number and the rest of the attributes are all decimal numbers in USD. 
 
+Minimal data cleaning was necessary for this dataset as there were no null or missing values found. When conducting a heatmap, we found the lowest correlation to be between Volume and all other attributes and was therefore dropped from the dataset. The Date attribute was converted from a categorical attribute to a float in which the year is a whole number, followed by the month and day as a decimal. There were 513 outliers found in this dataset, but were not removed because once removed, our models were not able to quite capture the complexity of the dataset and nature of the stock market. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4in]{./Figures/TSLA.png}
+\end{figure}
 
 
 \section{Methods}
