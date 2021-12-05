@@ -11,9 +11,9 @@ Data: Tesla Stock https://www.kaggle.com/varpit94/tesla-stock-data-updated-till-
 ### Requirements
 You will need to have python3, pip, and Flask installed.
 
-I followed this tutorial for installing pip: https://phoenixnap.com/kb/install-pip-mac
-For installing python3: https://realpython.com/installing-python/
-For installing flask: You can run 
+For installing pip: https://phoenixnap.com/kb/install-pip-mac <br/>
+For installing python3: https://realpython.com/installing-python/ <br/>
+For installing flask: You can run
 ```
 pip install Flask
 ```
